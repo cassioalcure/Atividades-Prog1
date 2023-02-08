@@ -20,7 +20,7 @@ int main()
     while (1)
     {
         int i, j = 0;
-        
+        \
         printf("Digite uma palavra de 5 caracteres: ");
         scanf("%s", palavra);
         printf("Digite outra palavra de 5 caracteres: ");
