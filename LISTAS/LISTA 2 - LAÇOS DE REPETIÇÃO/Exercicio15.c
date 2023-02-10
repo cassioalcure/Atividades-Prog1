@@ -5,32 +5,34 @@ ao índice da coluna, devem ser igual a 1 e todos os demais elementos devem ser 
 imprimir a matriz o programa deve terminar..*/
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int main()
-{
-
-    int M = 0, N = 0;
-    int i, j;
-
-    printf("Digite um valor para M: ");
-    scanf("%d,", &M);
-    printf("Digite um valor para N: ");
-    scanf("%d", &N);
-    for (i = 0; i < N; i++)
-    {
-        for (j = 0; j < M; j++)
-        {
-            if (i == j)
-            {
-                printf("1 ");
-            }
-            else
-            {
-                printf("0 ");
-            }
-        }
-        printf("\n");
+int main(void) {
+  
+  int N,M,i,j,k;
+  int **matriz;
+  
+  printf("\nDigite dois números inteiros positivos.\n\n");
+  scanf("%d %d",&N,&M);
+  
+  matriz = (int**) malloc(N*sizeof(int*));
+  
+  for(i=0;i<N;i++){
+    matriz[i] = (int*) malloc(N*sizeof(int));
     }
-
-    return 0;
+  
+  for(i=0;i<N;i++){
+    for(j=0;j<M;j++){
+      if(i != j) matriz[i][j] = 0;
+      if(i == j) matriz[i][j] = 1;
+      }
+    }
+  
+  printf("\n");
+  for(i=0;i<N;i++){
+    for(j=0;j<M;j++) printf("%d ",matriz[i][j]);
+    printf("\n");
+    }
+  
+  return 0;
 }
