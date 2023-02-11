@@ -1,3 +1,9 @@
+/*Considerando que um vetor tridimensional ~v = (x; y; z). Conclua a função calculaModuloR3 para que o programa a seguir calcule
+corretamente o módulo de um vetor tridimensional. Utilize as funções pow e sqrt da biblioteca
+math.h para calcular respectivamente o quadrado e a raiz quadrada. Apenas o código da
+função calculaModuloR3 precisa ser anexado à prova e os demais códigos da questão
+não devem ser alterados.*/
+
 #include <stdio.h>
 #include <math.h>
 
